@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Icarus Art Society</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f1ee;
+      color: #222;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('logo/Icaruslogo.jpg'); /* Replace with your actual path */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.06; /* Faded effect */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    nav {
+      background-color: #00205B;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      display: none;
+      padding: 2rem;
+    }
+
+    .active {
+      display: block;
+    }
+
+  .home {
+  background: linear-gradient(rgba(0, 32, 91, 0.7), rgba(0, 32, 91, 0.8)), 
+              url('logo/Icaruslogo.jpg') center/contain no-repeat;
+  min-height: 100vh;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.overlay {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  max-width: 700px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: #FFD100;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  color: #f9f9f9;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px #000;
+}
+
+    .documents, .artwork {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .documents h2, .artwork h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      text-align: center;
+      color: #00205B;
+      margin-bottom: 1rem;
+    }
+
+    .documents ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .documents li {
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      background-color: #f9f7fc;
+      border-left: 4px solid #6b4c9a;
+      transition: 0.3s;
+    }
+
+    .documents li:hover {
+      background-color: #ece4fa;
+    }
+
+    .documents a {
+      text-decoration: none;
+      color: #3c287b;
+      font-weight: bold;
+    }
+
+    .documents p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .overlay h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<body>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('documents')">Documents</a>
+    <a href="#" onclick="showPage('artwork')">Artwork</a>
+  </nav>
+
+  <div id="home" class="page home active">
+    <div class="overlay">
+      <h1>ICARUS</h1>
+      <p>The Icarus Art Society, established in 2025 at the Namibia University of Science and Technology, is a haven for visual expression and artistic innovation. Our mission is to foster creativity and provide a platform for students to showcase their talents.</p>
+    </div>
+  </div>
+
+  <div id="documents" class="page documents">
+    <h2>📂 Society Documents</h2>
+    <ul>
+      <li>
+        <a href="Constitution of the Icarus Society.docx" target="_blank">Constitution</a>
+        <p>This document outlines the foundational principles, objectives, and regulations governing the Icarus Art Society.</p>
+      </li>
+      <li>
+        <a href="Icarus Society Year Plan.docx" target="_blank">Event Calendar</a>
+        <p>A comprehensive guide to all upcoming art exhibitions, workshops, and society meetings.</p>
+      </li>
+      <li>
+        <a href="Icarus Registration form.docx" target="_blank">Membership Form</a>
+        <p>Interested in joining? Download this form to become a part of our creative community.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div id="artwork" class="page artwork">
+    <h2>🎨 Our Artwork Gallery</h2>
+    <div class="gallery">
+      <!-- 78 sample image placeholders -->
+      <!-- Replace with actual paths to your images -->
+      <img src="Icarus photos/IMG-20250719-WA0010.jpg" alt="Artwork 1">
+      <img src="Icarus photos/IMG-20250719-WA0011.jpg" alt="Artwork 2">
+      <img src="Icarus photos/IMG-20250719-WA0012.jpg" alt="Artwork 3">
+      <img src="Icarus photos/IMG-20250719-WA0013.jpg" alt="Artwork 4">
+      <img src="Icarus photos/IMG-20250719-WA0014.jpg" alt="Artwork 5">
+      <img src="Icarus photos/IMG-20250719-WA0015.jpg" alt="Artwork 6">
+      <img src="Icarus photos/IMG-20250719-WA0016.jpg" alt="Artwork 8">
+      <img src="Icarus photos/IMG-20250719-WA0017.jpg" alt="Artwork 9">
+      <img src="Icarus photos/IMG-20250719-WA0018.jpg" alt="Artwork 10">
+      <img src="Icarus photos/IMG-20250719-WA0019.jpg" alt="Artwork 11">
+      <img src="Icarus photos/IMG-20250719-WA0020.jpg" alt="Artwork 12">
+      <img src="Icarus photos/IMG-20250719-WA0021.jpg" alt="Artwork 13">
+      <img src="Icarus photos/IMG-20250719-WA0022.jpg" alt="Artwork 14">
+      <img src="Icarus photos/IMG-20250719-WA0023.jpg" alt="Artwork 15">
+      <img src="Icarus photos/IMG-20250719-WA0024.jpg" alt="Artwork 16">
+      <img src="Icarus photos/IMG-20250719-WA0025.jpg" alt="Artwork 17">
+      <img src="Icarus photos/IMG-20250719-WA0026.jpg" alt="Artwork 18">
+      <img src="Icarus photos/IMG-20250719-WA0027.jpg" alt="Artwork 19">
+      <img src="Icarus photos/IMG-20250719-WA0028.jpg" alt="Artwork 20">
+      <img src="Icarus photos/IMG-20250719-WA0029.jpg" alt="Artwork 21">
+      <img src="Icarus photos/IMG-20250719-WA0030.jpg" alt="Artwork 22">
+      <img src="Icarus photos/IMG-20250719-WA0031.jpg" alt="Artwork 23">
+      <img src="Icarus photos/IMG-20250719-WA0032.jpg" alt="Artwork 24">
+      <img src="Icarus photos/IMG-20250719-WA0033.jpg" alt="Artwork 25">
+      <img src="Icarus photos/IMG-20250719-WA0034.jpg" alt="Artwork 26">
+      <img src="Icarus photos/IMG-20250719-WA0035.jpg" alt="Artwork 27">
+      <img src="Icarus photos/IMG-20250719-WA0036.jpg" alt="Artwork 28">
+      <img src="Icarus photos/IMG-20250719-WA0037.jpg" alt="Artwork 29">
+      <img src="Icarus photos/IMG-20250719-WA0038.jpg" alt="Artwork 30">
+      <img src="Icarus photos/IMG-20250719-WA0039.jpg" alt="Artwork 31">
+      <img src="Icarus photos/IMG-20250719-WA0040.jpg" alt="Artwork 32">
+      <img src="Icarus photos/IMG-20250719-WA0041.jpg" alt="Artwork 33">
+      <img src="Icarus photos/IMG-20250719-WA0042.jpg" alt="Artwork 34">
+      <img src="Icarus photos/IMG-20250719-WA0043.jpg" alt="Artwork 35">
+      <img src="Icarus photos/IMG-20250719-WA0044.jpg" alt="Artwork 36">
+      <img src="Icarus photos/IMG-20250719-WA0045.jpg" alt="Artwork 37">
+      <img src="Icarus photos/IMG-20250719-WA0046.jpg" alt="Artwork 38">
+      <img src="Icarus photos/IMG-20250719-WA0047.jpg" alt="Artwork 39">
+      <img src="Icarus photos/IMG-20250719-WA0048.jpg" alt="Artwork 40">
+      <img src="Icarus photos/IMG-20250719-WA0049.jpg" alt="Artwork 41">
+      <img src="Icarus photos/IMG-20250719-WA0050.jpg" alt="Artwork 42">
+      <img src="Icarus photos/IMG-20250719-WA0051.jpg" alt="Artwork 43">
+      <img src="Icarus photos/IMG-20250719-WA0052.jpg" alt="Artwork 44">
+      <img src="Icarus photos/IMG-20250719-WA0053.jpg" alt="Artwork 45">
+      <img src="Icarus photos/IMG-20250719-WA0054.jpg" alt="Artwork 46">
+      <img src="Icarus photos/IMG-20250719-WA0055.jpg" alt="Artwork 47">
+      <img src="Icarus photos/IMG-20250719-WA0056.jpg" alt="Artwork 48">
+      <img src="Icarus photos/IMG-20250719-WA0057.jpg" alt="Artwork 49">
+      <img src="Icarus photos/IMG-20250719-WA0058.jpg" alt="Artwork 50">
+      <img src="Icarus photos/IMG-20250719-WA0059.jpg" alt="Artwork 51">
+      <img src="Icarus photos/IMG-20250719-WA0060.jpg" alt="Artwork 52">
+      <img src="Icarus photos/IMG-20250719-WA0061.jpg" alt="Artwork 53">
+      <img src="Icarus photos/IMG-20250719-WA0062.jpg" alt="Artwork 54">
+      <img src="Icarus photos/IMG-20250719-WA0063.jpg" alt="Artwork 55">
+      <img src="Icarus photos/IMG-20250719-WA0064.jpg" alt="Artwork 56">
+      <img src="Icarus photos/IMG-20250719-WA0065.jpg" alt="Artwork 57">
+      <img src="Icarus photos/IMG-20250719-WA0066.jpg" alt="Artwork 58">
+      <img src="Icarus photos/IMG-20250719-WA0067.jpg" alt="Artwork 59">
+      <img src="Icarus photos/IMG-20250719-WA0068.jpg" alt="Artwork 60">
+      <img src="Icarus photos/IMG-20250719-WA0069.jpg" alt="Artwork 61">
+      <img src="Icarus photos/IMG-20250719-WA0070.jpg" alt="Artwork 62">
+      <img src="Icarus photos/IMG-20250719-WA0071.jpg" alt="Artwork 63">
+      <img src="Icarus photos/IMG-20250719-WA0072.jpg" alt="Artwork 64">
+      <img src="Icarus photos/IMG-20250719-WA0073.jpg" alt="Artwork 65">
+      <img src="Icarus photos/IMG-20250719-WA0074.jpg" alt="Artwork 66">
+      <img src="Icarus photos/IMG-20250719-WA0075.jpg" alt="Artwork 67">
+      <img src="Icarus photos/IMG-20250719-WA0076.jpg" alt="Artwork 68">
+      <img src="Icarus photos/IMG-20250719-WA0077.jpg" alt="Artwork 69">
+      <img src="Icarus photos/IMG-20250719-WA0078.jpg" alt="Artwork 70">
+      <img src="Icarus photos/IMG-20250719-WA0079.jpg" alt="Artwork 71">
+      <img src="Icarus photos/IMG-20250719-WA0080.jpg" alt="Artwork 72">
+      <img src="Icarus photos/IMG-20250719-WA0081.jpg" alt="Artwork 73">
+      <img src="Icarus photos/IMG-20250719-WA0082.jpg" alt="Artwork 74">
+      <img src="Icarus photos/IMG-20250719-WA0083.jpg" alt="Artwork 75">
+      <img src="Icarus photos/IMG-20250719-WA0084.jpg" alt="Artwork 76">
+      <img src="Icarus photos/IMG-20250719-WA0085.jpg" alt="Artwork 77">
+      <img src="Icarus photos/IMG-20250719-WA0086.jpg" alt="Artwork 78">
+      <img src="Icarus photos/IMG-20250720-WA0004.jpg" alt="Artwork 78">
+    
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
